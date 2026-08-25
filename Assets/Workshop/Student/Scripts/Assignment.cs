@@ -25,9 +25,9 @@ namespace Assignment
             AS11_SpawnEnemies();
             StartCoroutine(AS12_CountTime());
             AS13_SumOfNumbersInRow();
-            // AS14_SumOfNumbersInColumn();
-            // AS15_MakeTheTriangle();
-            // AS16_MultiplicationTableOf_2_3_and_4();
+            AS14_SumOfNumbersInColumn();
+            AS15_MakeTheTriangle();
+            AS16_MultiplicationTableOf_2_3_and_4();
             // EX_01_TicTacToeGame_TurnPlay();
 
         }
@@ -605,7 +605,7 @@ namespace Assignment
             {
                 result += matrix[as13_row, i];
             }
-            Debug.Log(result);
+            Debug.Log($"Row {as13_row}, Sum = {result}");
             //throw new NotImplementedException();
         }
 
@@ -661,8 +661,14 @@ namespace Assignment
         public int as14_column;
         public void AS14_SumOfNumbersInColumn()
         {
+            int result = 0;
             var matrix = as14_matrix.Get2DArray();
-            throw new NotImplementedException();
+            for (int i = 0; i < as13_matrix.cols; i++)
+            {
+                result += matrix[i, as14_column];
+            }
+            Debug.Log($"Column {as14_column}, Sum = {result}");
+            //throw new NotImplementedException();
         }
 
         /*
@@ -712,7 +718,17 @@ namespace Assignment
         public int as15_size;
         public void AS15_MakeTheTriangle()
         {
-            throw new NotImplementedException();
+            var text = "*";
+            for (int i = 0; i < as15_size; i++)
+            {
+                string line = "";
+                for (int j = 0; j <= i; j++)
+                {
+                    line += text;
+                }
+                Debug.Log(line);
+            }
+            //throw new NotImplementedException();
         }
 
         /*
@@ -741,7 +757,11 @@ namespace Assignment
          */
         public void AS16_MultiplicationTableOf_2_3_and_4()
         {
-            throw new NotImplementedException();
+            for (int i = 1; i <= 12; i++)
+            {
+                Debug.Log($"2 * {i} = {2*i}\t3 * {i} = {3 * i}\t4 * {i} = {4 * i}");
+            }
+            //throw new NotImplementedException();
         }
 
         #endregion

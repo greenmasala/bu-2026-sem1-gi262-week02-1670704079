@@ -32,9 +32,9 @@ namespace Workshop.Student
             Instantiate(Players[UnityEngine.Random.Range(0, Players.Length)], new Vector2(0, 0), Quaternion.identity);
 
             // 2. create obstacles
-            for (int y = 0; y < columns/2; y++)
+            for (int y = 0; y < rows/2; y++)
             {
-                var tile = Instantiate(wallTiles[1], new Vector2(rows / 2, y), Quaternion.identity);
+                var tile = Instantiate(wallTiles[1], new Vector3(columns / 2, y, -1), Quaternion.identity);
             }
 
             // 3. create floor
