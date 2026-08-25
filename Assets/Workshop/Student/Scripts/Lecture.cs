@@ -23,11 +23,18 @@ namespace Assignment
 
         public void LCT01_SyntaxArray()
         {
-            throw new System.NotImplementedException();
+            string[] _ironManSuit = new string[2];
+            _ironManSuit[0] = "Mk. 1";
+            _ironManSuit[1] = "Mk. 2";
+            string tonyStarkWear = _ironManSuit[0];
         }
 
         public void LCT02_ArrayInitialize()
         {
+            string[] spidermanSuits = new string[] { "Classic", "idk i havent watched spidermans" };
+            string[] batmanSuits = new string[2] { "Classic", "Even more classic" };
+
+            Debug.Log(batmanSuits.Length);
             throw new System.NotImplementedException();
         }
 
@@ -114,7 +121,26 @@ namespace Assignment
          */
         public void LCT05_Syntax2DArray()
         {
-            throw new System.NotImplementedException();
+            int[,] my2DArray = new int[3, 3]
+            {
+                //col 0 1 2
+                { 1, 2, 3 }, 
+                { 4, 5, 6 },
+                { 7, 8, 9 },
+            };
+
+            //GetLength(0) = row
+            for (int row = 0; row < my2DArray.GetLength(0); row++) 
+            {
+                string rowStr = "";
+                //GetLength(0) = column
+                for (int col = 0; col < my2DArray.GetLength(0); col++) 
+                {
+                    rowStr += my2DArray[row, col];
+                }
+                Debug.Log(rowStr);
+            }
+            //throw new System.NotImplementedException();
         }
 
         /*
